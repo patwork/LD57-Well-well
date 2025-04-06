@@ -10,4 +10,16 @@ signal game_win
 signal game_fail
 
 @warning_ignore("UNUSED_SIGNAL")
-signal player_hit_by_obstacle(obstacle: MyObstacle)
+signal update_player_life(value: int)
+
+@warning_ignore("UNUSED_SIGNAL")
+signal update_player_ring(value: int)
+
+@warning_ignore("UNUSED_SIGNAL")
+signal ring_passed
+
+@warning_ignore("UNUSED_SIGNAL")
+signal collected_heart
+
+@warning_ignore("UNUSED_SIGNAL")
+signal hit_by_obstacle(obstacle: MyObstacle)

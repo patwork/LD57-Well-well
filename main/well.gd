@@ -32,6 +32,9 @@ func _process(delta: float) -> void:
 		# remove top chunk
 		get_child(0).queue_free()
 
+		# emit signal
+		EventBus.ring_passed.emit()
+
 
 func add_chunk() -> void:
 	var scene: PackedScene = chunks.pick_random()

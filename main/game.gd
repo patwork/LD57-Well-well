@@ -9,6 +9,9 @@ func _ready() -> void:
 	world_environment.environment.glow_enabled = true
 	world_environment.environment.fog_enabled = true
 
+	# everything is ready, let's go
+	EventBus.game_start.emit.call_deferred()
+
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):

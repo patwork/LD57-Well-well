@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://dvnhrp7jsje0b" path="res://default_theme.tres" id="1_c5hbf"]
 [ext_resource type="Script" uid="uid://wmh0vwj5gdpa" path="res://ui/info.gd" id="2_f4xp4"]
-[ext_resource type="Texture2D" uid="uid://knt0cky2dd60" path="res://ui/back.PNG" id="3_ppbss"]
+[ext_resource type="Texture2D" uid="uid://knt0cky2dd60" path="res://ui/back.png" id="3_ppbss"]
 
 [node name="Info" type="Control"]
 layout_mode = 3

@@ -10,6 +10,9 @@ extends CanvasLayer
 
 
 func _ready() -> void:
+	EventBus.update_player_life.connect(self.on_update_player_life)
+	EventBus.update_player_ring.connect(self.on_update_player_ring)
+
 	control_state.visible = true
 	control_win.visible = false
 	control_loose.visible = false
@@ -17,3 +20,11 @@ func _ready() -> void:
 
 func _on_button_menu_pressed() -> void:
 	Constants.change_scene_safe.call_deferred(Constants.menu_scene)
+
+
+func on_update_player_life(value: int) -> void:
+	label_life.text = Constants.label_life_str % value
+
+
+func on_update_player_ring(value: int) -> void:
+	label_ring.text = Constants.label_ring_str % value

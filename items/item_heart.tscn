@@ -1,0 +1,105 @@
+[gd_scene load_steps=13 format=3 uid="uid://cg30hiitgt7q2"]
+
+[ext_resource type="PackedScene" uid="uid://bfglmfd81yt0k" path="res://items/item.tscn" id="1_vpwwv"]
+[ext_resource type="Script" uid="uid://dhteov43be61r" path="res://items/item_heart.gd" id="2_ebfwl"]
+[ext_resource type="ArrayMesh" uid="uid://coktrcgcc67tj" path="res://assets/models/models_Heart.res" id="2_nrn7f"]
+[ext_resource type="AudioStream" uid="uid://c6q2f4yii6xah" path="res://assets/audio/pickupCoin.wav" id="4_ebfwl"]
+[ext_resource type="Texture2D" uid="uid://ba6aj2fqvft04" path="res://assets/particles/star.png" id="4_vdhas"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ebfwl"]
+radius = 0.3
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_e2kgl"]
+direction = Vector3(0, 0, 0)
+spread = 180.0
+initial_velocity_min = 1.0
+initial_velocity_max = 3.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ukadj"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("4_vdhas")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_8yn2m"]
+material = SubResource("StandardMaterial3D_ukadj")
+size = Vector2(0.3, 0.3)
+
+[sub_resource type="Animation" id="Animation_e2kgl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vdhas"]
+resource_name = "spin"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 0, 0), Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ukadj"]
+_data = {
+&"RESET": SubResource("Animation_e2kgl"),
+&"spin": SubResource("Animation_vdhas")
+}
+
+[node name="ItemHeart" instance=ExtResource("1_vpwwv")]
+script = ExtResource("2_ebfwl")
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("SphereShape3D_ebfwl")
+
+[node name="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(0.6, 0, 0, 0, -2.17199e-06, 0.6, 0, -0.6, -2.17199e-06, 0, 0, 0)
+rotation_order = 0
+mesh = ExtResource("2_nrn7f")
+
+[node name="GPUParticles3D" parent="." index="2"]
+emitting = false
+amount = 16
+explosiveness = 0.8
+visibility_aabb = AABB(-1, -1, -1, 2, 2.81037, 2)
+process_material = SubResource("ParticleProcessMaterial_e2kgl")
+draw_pass_1 = SubResource("QuadMesh_8yn2m")
+
+[node name="AudioStreamPlayer3D" parent="." index="3"]
+stream = ExtResource("4_ebfwl")
+
+[node name="AnimationPlayer" parent="." index="4"]
+libraries = {
+&"": SubResource("AnimationLibrary_ukadj")
+}
+autoplay = "spin"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="5"]
+light_color = Color(0.972549, 0.368627, 0.329412, 1)
+light_energy = 0.5
+omni_range = 1.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
