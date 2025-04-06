@@ -64,6 +64,7 @@ It was created from scratch in 48 hours for LD57 in Godot 4.4, Blender 4.4, Gimp
 [color=\"#abc\"]Controls:[/color] cursor keys or WASD.
 
 [color=\"#abc\"]Fonts:[/color] Copyright (c) 2011 Fontstage (info@fontstage.com), with Reserved Font Names, ‘Passion’."
+fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
