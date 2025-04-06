@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b60bmjq4wma8o"]
+
+[ext_resource type="Texture2D" uid="uid://cgac4esww0nb6" path="res://assets/models/models_tex_dirt.png" id="1_xg3h5"]
+
+[resource]
+resource_name = "mat_dirt"
+albedo_texture = ExtResource("1_xg3h5")
+roughness = 0.8

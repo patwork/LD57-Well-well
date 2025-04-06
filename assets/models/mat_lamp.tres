@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://26nb63q7sgrr"]
+
+[resource]
+resource_name = "mat_lamp"
+emission_enabled = true
+emission = Color(0.898039, 0.513726, 0.168627, 1)
+disable_receive_shadows = true

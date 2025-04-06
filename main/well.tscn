@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs2w80dt7b24m"]
+
+[ext_resource type="Script" uid="uid://bft4kt1gtwipv" path="res://main/well.gd" id="1_ipa1n"]
+[ext_resource type="PackedScene" uid="uid://614ycmwe1dpa" path="res://chunks/chunk_tube.tscn" id="2_ipa1n"]
+[ext_resource type="PackedScene" uid="uid://dil12gapi2ntx" path="res://chunks/chunk_bars.tscn" id="3_lodmv"]
+[ext_resource type="PackedScene" uid="uid://qmrbv4v4vyux" path="res://chunks/chunk_dirt_1.tscn" id="4_ncrpa"]
+[ext_resource type="PackedScene" uid="uid://cgww0vf4kl4bj" path="res://chunks/chunk_dirt_2.tscn" id="5_jno2r"]
+
+[node name="Well" type="Node3D"]
+script = ExtResource("1_ipa1n")
+chunks = Array[PackedScene]([ExtResource("2_ipa1n"), ExtResource("3_lodmv"), ExtResource("4_ncrpa"), ExtResource("5_jno2r")])
+
+[node name="ChunkTube" parent="." instance=ExtResource("2_ipa1n")]
+
+[node name="ChunkTube2" parent="." instance=ExtResource("2_ipa1n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, 0)
+
+[node name="ChunkTube3" parent="." instance=ExtResource("2_ipa1n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16, 0)
+
+[node name="ChunkTube4" parent="." instance=ExtResource("2_ipa1n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -24, 0)
+
+[node name="ChunkTube5" parent="." instance=ExtResource("2_ipa1n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -32, 0)
