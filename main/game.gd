@@ -12,4 +12,4 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
-		get_tree().change_scene_to_file(Constants.menu_scene)
+		Constants.change_scene_safe.call_deferred(Constants.menu_scene)

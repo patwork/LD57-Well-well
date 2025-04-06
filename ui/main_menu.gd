@@ -18,11 +18,11 @@ func _on_button_start_pressed() -> void:
 	loading.visible = true
 	animation_player.play("loading")
 	await animation_player.animation_finished
-	get_tree().change_scene_to_file(Constants.game_scene)
+	Constants.change_scene_safe.call_deferred(Constants.game_scene)
 
 
 func _on_button_info_pressed() -> void:
-	get_tree().change_scene_to_file(Constants.info_scene)
+	Constants.change_scene_safe.call_deferred(Constants.info_scene)
 
 
 func _on_button_quit_pressed() -> void:
