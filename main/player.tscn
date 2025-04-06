@@ -9,6 +9,7 @@ height = 1.7
 
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 2
+input_ray_pickable = false
 script = ExtResource("1_ab3tm")
 
 [node name="guy" parent="." instance=ExtResource("2_ab3tm")]

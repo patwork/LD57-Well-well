@@ -11,6 +11,10 @@ extends CharacterBody3D
 @onready var guy: MeshInstance3D = $guy/metarig/Skeleton3D/guy
 
 
+func _ready() -> void:
+	assert(guy)
+
+
 func _physics_process(delta: float) -> void:
 	var input_dir: Vector3 = Vector3(
 		Input.get_axis("digital_left", "digital_right"),
@@ -23,6 +27,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity = velocity.move_toward(Vector3.ZERO, friction * delta)
 
+	position.y = 0.0
 	guy.rotation.y = velocity.x * guy_roll
 
 	move_and_slide()

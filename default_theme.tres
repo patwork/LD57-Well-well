@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dvnhrp7jsje0b"]
+
+[ext_resource type="FontFile" uid="uid://pt555nkiaq1x" path="res://assets/fonts/PassionOne-Bold.ttf" id="1_e7bfs"]
+
+[resource]
+default_font = ExtResource("1_e7bfs")

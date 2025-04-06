@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="LD57 Well well"
-run/main_scene="uid://we2byuxnhpgr"
+run/main_scene="uid://bfman5r853hpr"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+run/max_fps=60
+config/icon="res://icon.png"
 
 [autoload]
 
+Constants="*res://scripts/constants.gd"
 EventBus="*res://scripts/event_bus.gd"
 
 [debug]
@@ -32,6 +34,10 @@ gdscript/warnings/unsafe_call_argument=1
 
 window/size/viewport_width=948
 window/size/viewport_height=533
+window/size/resizable=false
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="canvas_items"
 
 [editor]
 

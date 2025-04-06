@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://3xh5w6xlpu4c"]
+
+[ext_resource type="Theme" uid="uid://dvnhrp7jsje0b" path="res://default_theme.tres" id="1_c5hbf"]
+[ext_resource type="Script" uid="uid://wmh0vwj5gdpa" path="res://ui/info.gd" id="2_f4xp4"]
+[ext_resource type="Texture2D" uid="uid://knt0cky2dd60" path="res://ui/back.PNG" id="3_ppbss"]
+
+[node name="Info" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_c5hbf")
+script = ExtResource("2_f4xp4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ppbss")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 128
+theme_override_constants/margin_bottom = 64
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[color=\"#ccca77\"][font_size=48]Well well...[/font_size][/color]
+[color=\"#ccca77\"][font_size=24]game for Ludum Dare #57 (april 2025)[/font_size][/color]
+
+This game is loosely inspired by Kratos' Chain of Balance falling sequence in GOW3.
+
+It was created from scratch in 48 hours for LD57 in Godot 4.4, Blender 4.4, Gimp 3.0 and Audacity 3.7. The theme of the jam was \"[color=\"#abc\"]Depths[/color]\". Best played on Windows, but the game is also available in an OpenGL-enabled browser version.
+
+[color=\"#abc\"]Controls:[/color] cursor keys or WASD.
+
+[color=\"#abc\"]Fonts:[/color] Copyright (c) 2011 Fontstage (info@fontstage.com), with Reserved Font Names, ‘Passion’."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button_return" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 48
+text = " MENU "
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Button_return" to="." method="_on_button_return_pressed"]
