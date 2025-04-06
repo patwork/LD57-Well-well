@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cgww0vf4kl4bj"]
 
 [ext_resource type="PackedScene" uid="uid://kkabhb2g4cy1" path="res://chunks/chunk.tscn" id="1_clste"]
-[ext_resource type="ArrayMesh" uid="uid://co62nxg1rrdjr" path="res://assets/models/models_Ring_metal.res" id="2_qxb3j"]
+[ext_resource type="ArrayMesh" uid="uid://dbq11o0cvou8w" path="res://assets/models/models_Ring_metal_2.res" id="2_clste"]
 [ext_resource type="ArrayMesh" uid="uid://dpu5e7omivsws" path="res://assets/models/models_Cylinder_dirt_2.res" id="3_clste"]
 [ext_resource type="ArrayMesh" uid="uid://dwc7kk6wmyksm" path="res://assets/models/models_Rock_1_002.res" id="4_qxb3j"]
 
@@ -9,7 +9,7 @@
 
 [node name="MeshInstance3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
-mesh = ExtResource("2_qxb3j")
+mesh = ExtResource("2_clste")
 
 [node name="MeshInstance3D2" parent="." index="1"]
 mesh = ExtResource("3_clste")

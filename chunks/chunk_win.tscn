@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bq682da8cagot"]
+
+[ext_resource type="PackedScene" uid="uid://kkabhb2g4cy1" path="res://chunks/chunk.tscn" id="1_hinur"]
+[ext_resource type="ArrayMesh" uid="uid://dbq11o0cvou8w" path="res://assets/models/models_Ring_metal_2.res" id="2_i5ht3"]
+[ext_resource type="ArrayMesh" uid="uid://bbfmv8aymxtde" path="res://assets/models/models_Cylinder_win.res" id="3_i5ht3"]
+[ext_resource type="PackedScene" uid="uid://cqx0y6e7h1w1p" path="res://decoration/lamp_wall.tscn" id="4_6td7u"]
+[ext_resource type="ArrayMesh" uid="uid://c3j3gvyp1sv8b" path="res://assets/models/models_Hearts.res" id="5_0d62t"]
+
+[node name="ChunkWin" instance=ExtResource("1_hinur")]
+
+[node name="MeshInstance3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+mesh = ExtResource("2_i5ht3")
+
+[node name="MeshInstance3D2" parent="." index="1"]
+mesh = ExtResource("3_i5ht3")
+
+[node name="LampWall" parent="." index="2" instance=ExtResource("4_6td7u")]
+transform = Transform3D(0.573004, 0, 0.819552, 0, 1, 0, -0.819552, 0, 0.573004, -1.15114, 2, -0.876777)
+light_color = Color(0.921569, 0.45098, 0.92549, 1)
+
+[node name="LampWall2" parent="." index="3" instance=ExtResource("4_6td7u")]
+transform = Transform3D(-0.539212, 0, -0.84217, 0, 1, 0, 0.84217, 0, -0.539212, 1.22277, -2, 0.783602)
+light_color = Color(0.921569, 0.45098, 0.92549, 1)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." index="4"]
+mesh = ExtResource("5_0d62t")

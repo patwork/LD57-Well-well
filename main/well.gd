@@ -27,11 +27,15 @@ func _process(delta: float) -> void:
 			child.position.y = chunk_height - (chunk_height * i)
 
 		# add new chunk
-		var scene: PackedScene = chunks.pick_random()
-		var chunk: MyChunk = (scene as PackedScene).instantiate()
-		add_child(chunk)
-		chunk.position.y = -(chunk_height * chunks_ahead)
-		chunk.rotation.y = 0.2 * PI * randi_range(0, 10)
+		add_chunk.call_deferred()
 
 		# remove top chunk
 		get_child(0).queue_free()
+
+
+func add_chunk() -> void:
+	var scene: PackedScene = chunks.pick_random()
+	var chunk: MyChunk = (scene as PackedScene).instantiate()
+	add_child(chunk)
+	chunk.position.y = -(chunk_height * chunks_ahead)
+	chunk.rotation.y = 0.2 * PI * randi_range(0, 10)

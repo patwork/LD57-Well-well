@@ -42,6 +42,10 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "res://assets/models/mat_dirt.tres"
 },
+"mat_heart": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/mat_heart.tres"
+},
 "mat_lamp": {
 "use_external/enabled": true,
 "use_external/path": "res://assets/models/mat_lamp.tres"
@@ -49,9 +53,45 @@ _subresources={
 "mat_rock": {
 "use_external/enabled": true,
 "use_external/path": "res://assets/models/mat_rock.tres"
+},
+"mat_wood": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/mat_wood.tres"
 }
 },
 "meshes": {
+"models_Bar_1": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/models/models_Bar_1.res"
+},
+"models_Bar_2": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/models/models_Bar_2.res"
+},
+"models_Bar_3": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/models/models_Bar_3.res"
+},
+"models_Cylinder": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/models/models_Cylinder.res"
+},
 "models_Cylinder_bars": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
@@ -84,6 +124,38 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/path": "res://assets/models/models_Cylinder_tube.res"
 },
+"models_Cylinder_win": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/models/models_Cylinder_win.res"
+},
+"models_Fan_1": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/models/models_Fan_1.res"
+},
+"models_Heart": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/models/models_Heart.res"
+},
+"models_Hearts": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/models/models_Hearts.res"
+},
 "models_Lamp_1": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
@@ -100,13 +172,45 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/path": "res://assets/models/models_Ring_metal.res"
 },
-"models_Rock_1_002": {
+"models_Ring_metal_2": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://assets/models/models_Rock_1_002.res"
+"save_to_file/path": "res://assets/models/models_Ring_metal_2.res"
+},
+"models_Rock_1": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/models/models_Rock_1.res"
+},
+"models_Rock_2": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/models/models_Rock_2.res"
+},
+"models_Rock_3": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/models/models_Rock_3.res"
+},
+"models_Rocks_1": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/models/models_Rocks_1.res"
 },
 "models_Rocks_2": {
 "generate/lightmap_uv": 0,

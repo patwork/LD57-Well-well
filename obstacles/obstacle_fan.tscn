@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://vqstvxa6pgtt"]
+
+[ext_resource type="PackedScene" uid="uid://b2pjs6do6hh4i" path="res://obstacles/obstacle.tscn" id="1_qmdxb"]
+[ext_resource type="Shape3D" uid="uid://dxu34ybu0i4c1" path="res://assets/shapes/col-fan-1.tres" id="2_lsl8n"]
+[ext_resource type="ArrayMesh" uid="uid://cp8nfcxqb2p1g" path="res://assets/models/models_Fan_1.res" id="3_0x2yk"]
+
+[node name="ObstacleFan" instance=ExtResource("1_qmdxb")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = ExtResource("2_lsl8n")
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = ExtResource("3_0x2yk")

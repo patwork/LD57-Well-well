@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2pjs6do6hh4i"]
+
+[ext_resource type="Script" uid="uid://8jseejo0mq7s" path="res://obstacles/obstacle.gd" id="1_5rvb3"]
+
+[node name="Obstacle" type="Area3D"]
+collision_layer = 4
+collision_mask = 2
+monitorable = false
+script = ExtResource("1_5rvb3")
+metadata/_custom_type_script = "uid://8jseejo0mq7s"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

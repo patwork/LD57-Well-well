@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqx0y6e7h1w1p"]
+[gd_scene load_steps=3 format=3 uid="uid://cqx0y6e7h1w1p"]
 
 [ext_resource type="ArrayMesh" uid="uid://bjbtxjt2867ml" path="res://assets/models/models_Lamp_1.res" id="1_5iaeh"]
+[ext_resource type="Script" uid="uid://qnko7bh3pp82" path="res://decoration/lamp_wall.gd" id="1_hkdyk"]
 
 [node name="LampWall" type="Node3D"]
+script = ExtResource("1_hkdyk")
 
 [node name="ModelsLamp1" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_5iaeh")
