@@ -57,9 +57,9 @@ bbcode_enabled = true
 text = "[color=\"#ccca77\"][font_size=48]Well well...[/font_size][/color]
 [color=\"#ccca77\"][font_size=24]game for Ludum Dare #57 (april 2025)[/font_size][/color]
 
-This game is loosely inspired by Kratos' Chain of Balance falling sequence in GOW3. Created from scratch in 48 hours for [color=\"#abc\"]LD57[/color]. The theme of the jam was \"[color=\"#abc\"]Depths[/color]\". Best played on Windows, but a browser version is also available (OpenGL and WASM support required).
+This game is loosely inspired by Kratos' Chain of Balance falling sequence in GOW3. Created from scratch in 48 hours for [color=\"#abc\"]LD57[/color]. The theme of the jam was \"[color=\"#abc\"]Depths[/color]\". Runs best natively on Windows, but there is also a web browser version (OpenGL and WASM support required).
 
-[color=\"#abc\"]Tech:[/color] Godot 4.4, Blender 4.4, Gimp 3.0 and Audacity 3.7.
+[color=\"#abc\"]Tech:[/color] Godot 4.4, Blender 4.4, Gimp 3.0, Audacity 3.7 and jsfxr.
 
 [color=\"#abc\"]Controls:[/color] cursor keys or WASD.
 

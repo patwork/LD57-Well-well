@@ -13,4 +13,10 @@ metadata/_custom_type_script = "uid://8jseejo0mq7s"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+bus = &"SFX"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AudioStreamPlayer3D")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

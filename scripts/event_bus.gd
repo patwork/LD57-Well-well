@@ -23,3 +23,6 @@ signal collected_heart
 
 @warning_ignore("UNUSED_SIGNAL")
 signal hit_by_obstacle(obstacle: MyObstacle)
+
+@warning_ignore("UNUSED_SIGNAL")
+signal controls_enabled(value: bool)

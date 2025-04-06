@@ -3,7 +3,7 @@ extends Camera3D
 
 
 @export var player: MyPlayer = null
-@export var in_game: bool = true # FIXME
+@export var in_game: bool = true
 @export var starting_position: Vector3 = Vector3(0.0, 1.0, 0.0)
 @export var starting_fov: float = 75.0
 @export var pan_speed: float = 3.0

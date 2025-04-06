@@ -10,12 +10,22 @@ extends CanvasLayer
 
 
 func _ready() -> void:
+	EventBus.game_win.connect(self.on_game_win)
+	EventBus.game_fail.connect(self.on_game_fail)
 	EventBus.update_player_life.connect(self.on_update_player_life)
 	EventBus.update_player_ring.connect(self.on_update_player_ring)
 
 	control_state.visible = true
 	control_win.visible = false
 	control_loose.visible = false
+
+
+func on_game_win() -> void:
+	control_win.visible = true
+
+
+func on_game_fail() -> void:
+	control_loose.visible = true
 
 
 func _on_button_menu_pressed() -> void:
