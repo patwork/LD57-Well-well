@@ -50,6 +50,7 @@ folder_colors={
 "res://assets/": "green",
 "res://chunks/": "purple",
 "res://decoration/": "purple",
+"res://fix/": "yellow",
 "res://items/": "purple",
 "res://main/": "blue",
 "res://obstacles/": "purple",

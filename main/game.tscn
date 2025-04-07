@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://we2byuxnhpgr"]
+[gd_scene load_steps=11 format=3 uid="uid://we2byuxnhpgr"]
 
 [ext_resource type="PackedScene" uid="uid://6awuxyyaw2y" path="res://main/player.tscn" id="1_2fwfh"]
 [ext_resource type="Script" uid="uid://b2133vr203mhg" path="res://main/game.gd" id="1_3qcir"]
@@ -9,6 +9,7 @@
 [ext_resource type="Shape3D" uid="uid://cnsvu7iie7n3f" path="res://assets/shapes/col-right.tres" id="5_3qcir"]
 [ext_resource type="Script" uid="uid://d24587kbq4sfs" path="res://main/camera_3d.gd" id="7_jc0vi"]
 [ext_resource type="PackedScene" uid="uid://cg7g0s35vjakf" path="res://ui/game_ui.tscn" id="8_2c7eb"]
+[ext_resource type="PackedScene" uid="uid://c2uj40026xotk" path="res://fix/fix.tscn" id="10_j015t"]
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_3qcir")
@@ -50,3 +51,5 @@ shape = ExtResource("4_vfw6y")
 shape = ExtResource("5_3qcir")
 
 [node name="GameUI" parent="." instance=ExtResource("8_2c7eb")]
+
+[node name="Fix" parent="." instance=ExtResource("10_j015t")]
