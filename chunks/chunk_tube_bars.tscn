@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://bimuwptq70ngh"]
+
+[ext_resource type="PackedScene" uid="uid://kkabhb2g4cy1" path="res://chunks/chunk.tscn" id="1_qqlod"]
+[ext_resource type="ArrayMesh" uid="uid://dbq11o0cvou8w" path="res://assets/models/models_Ring_metal_2.res" id="2_xyxo6"]
+[ext_resource type="ArrayMesh" uid="uid://b0etn8huwtfu7" path="res://assets/models/models_Cylinder_tube.res" id="3_itufq"]
+[ext_resource type="PackedScene" uid="uid://cqx0y6e7h1w1p" path="res://decoration/lamp_wall.tscn" id="4_2yo4j"]
+[ext_resource type="PackedScene" uid="uid://ba5ptdd8bwxet" path="res://obstacles/obstacle_bar_3.tscn" id="5_itufq"]
+[ext_resource type="PackedScene" uid="uid://cv265uaaokpej" path="res://obstacles/obstacle_bar_2.tscn" id="6_2yo4j"]
+
+[node name="ChunkTubeBars" instance=ExtResource("1_qqlod")]
+
+[node name="MeshInstance3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+mesh = ExtResource("2_xyxo6")
+
+[node name="MeshInstance3D2" parent="." index="1"]
+mesh = ExtResource("3_itufq")
+
+[node name="LampWall" parent="." index="2" instance=ExtResource("4_2yo4j")]
+transform = Transform3D(0.573004, 0, 0.819552, 0, 1, 0, -0.819552, 0, 0.573004, -1.15114, 2, -0.876777)
+
+[node name="LampWall2" parent="." index="3" instance=ExtResource("4_2yo4j")]
+transform = Transform3D(-0.539212, 0, -0.84217, 0, 1, 0, 0.84217, 0, -0.539212, 1.22277, -2, 0.783602)
+
+[node name="Bars" type="Node3D" parent="." index="4"]
+
+[node name="ObstacleBar3" parent="Bars" index="0" instance=ExtResource("5_itufq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="ObstacleBar2" parent="Bars" index="1" instance=ExtResource("6_2yo4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.237356, 0)

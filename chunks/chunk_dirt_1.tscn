@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://qmrbv4v4vyux"]
+[gd_scene load_steps=8 format=3 uid="uid://qmrbv4v4vyux"]
 
 [ext_resource type="PackedScene" uid="uid://kkabhb2g4cy1" path="res://chunks/chunk.tscn" id="1_xyusy"]
 [ext_resource type="ArrayMesh" uid="uid://dbq11o0cvou8w" path="res://assets/models/models_Ring_metal_2.res" id="2_xyusy"]
 [ext_resource type="ArrayMesh" uid="uid://b3ns3oiyyijo2" path="res://assets/models/models_Cylinder_dirt_1.res" id="3_cxf88"]
 [ext_resource type="ArrayMesh" uid="uid://dru6w6s6u7wto" path="res://assets/models/models_Rocks_2.res" id="4_anp5w"]
+[ext_resource type="PackedScene" uid="uid://ba5ptdd8bwxet" path="res://obstacles/obstacle_bar_3.tscn" id="5_cxf88"]
+[ext_resource type="PackedScene" uid="uid://cv265uaaokpej" path="res://obstacles/obstacle_bar_2.tscn" id="6_anp5w"]
+[ext_resource type="PackedScene" uid="uid://cqx0y6e7h1w1p" path="res://decoration/lamp_wall.tscn" id="7_anp5w"]
 
 [node name="ChunkDirt1" instance=ExtResource("1_xyusy")]
 
@@ -16,3 +19,14 @@ mesh = ExtResource("3_cxf88")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="." index="2"]
 mesh = ExtResource("4_anp5w")
+
+[node name="Bars" type="Node3D" parent="." index="3"]
+
+[node name="ObstacleBar3" parent="Bars" index="0" instance=ExtResource("5_cxf88")]
+transform = Transform3D(0.964058, 0, 0.265691, 0, 1, 0, -0.265691, 0, 0.964058, 0, 0, -0.75489)
+
+[node name="ObstacleBar2" parent="Bars" index="1" instance=ExtResource("6_anp5w")]
+transform = Transform3D(0.957067, 0, -0.289867, 0, 1, 0, 0.289867, 0, 0.957067, 0, -0.233948, 0.876454)
+
+[node name="LampWall" parent="." index="4" instance=ExtResource("7_anp5w")]
+transform = Transform3D(0.956646, 0, -0.291253, 0, 1, 0, 0.291253, 0, 0.956646, 0.477499, 2, -1.36596)

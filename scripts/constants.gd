@@ -7,7 +7,7 @@ var game_scene: StringName = "res://main/game.tscn"
 var label_life_str: StringName = "LIFE: %d"
 var label_ring_str: StringName = "RING: %d"
 
-var new_game_life: int = 5
+var new_game_life: int = 3
 var new_game_ring: int = 1
 var max_rings: int = 100
 

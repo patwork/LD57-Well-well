@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv265uaaokpej"]
+
+[ext_resource type="PackedScene" uid="uid://b2pjs6do6hh4i" path="res://obstacles/obstacle.tscn" id="1_uusrc"]
+[ext_resource type="ArrayMesh" uid="uid://oujchtkvytny" path="res://assets/models/models_Bar_2.res" id="2_57arb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_65srx"]
+size = Vector3(3.95288, 0.131836, 0.550537)
+
+[node name="ObstacleBar2" instance=ExtResource("1_uusrc")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_65srx")
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = ExtResource("2_57arb")
