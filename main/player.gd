@@ -8,6 +8,7 @@ extends CharacterBody3D
 @export var analog_deadzone: float = 0.1
 @export var guy_roll: float = 0.1
 @export var invincible_cooldown: float = 1.0
+@export var sound_delay: float = 0.25
 
 @onready var guy: MeshInstance3D = $guy/metarig/Skeleton3D/guy
 @onready var gpu_particles_3d: GPUParticles3D = $GPUParticles3D
@@ -70,10 +71,7 @@ func on_hit_by_obstacle(_obstacle: MyObstacle) -> void:
 
 	make_invincible_temporarily()
 
-	var sound: AudioStreamPlayer3D = hurt_sounds.get_children().pick_random()
-	if not sound.playing:
-		sound.pitch_scale = randf_range(0.9, 1.1)
-		sound.play()
+	play_sound_delayed()
 
 	if gpu_particles_3d.emitting:
 		gpu_particles_3d.restart()
@@ -86,3 +84,13 @@ func make_invincible_temporarily() -> void:
 	invincible = true
 	await get_tree().create_timer(invincible_cooldown).timeout
 	invincible = false
+
+
+func play_sound_delayed() -> void:
+	var sound: AudioStreamPlayer3D = hurt_sounds.get_children().pick_random()
+	if sound.playing:
+		return
+
+	sound.pitch_scale = randf_range(0.95, 1.05)
+	await get_tree().create_timer(sound_delay).timeout
+	sound.play()

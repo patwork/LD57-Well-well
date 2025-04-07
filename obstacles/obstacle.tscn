@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2pjs6do6hh4i"]
+[gd_scene load_steps=7 format=3 uid="uid://b2pjs6do6hh4i"]
 
 [ext_resource type="Script" uid="uid://8jseejo0mq7s" path="res://obstacles/obstacle.gd" id="1_5rvb3"]
+[ext_resource type="AudioStream" uid="uid://rgms70l7c84w" path="res://assets/audio/hit-1.ogg" id="2_h0sg0"]
+[ext_resource type="AudioStream" uid="uid://6jovimt0lsr" path="res://assets/audio/hit-2.ogg" id="3_i6gay"]
+[ext_resource type="AudioStream" uid="uid://bi7paupxpjjgy" path="res://assets/audio/hit-3.ogg" id="4_voll8"]
+[ext_resource type="AudioStream" uid="uid://b50s6eclyd863" path="res://assets/audio/hit-4.ogg" id="5_ujuhw"]
+[ext_resource type="AudioStream" uid="uid://dudojo1npduaj" path="res://assets/audio/hit-5.ogg" id="6_14fsq"]
 
 [node name="Obstacle" type="Area3D"]
 collision_layer = 4
@@ -13,10 +18,29 @@ metadata/_custom_type_script = "uid://8jseejo0mq7s"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("")
+
+[node name="Sounds" type="Node3D" parent="."]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sounds"]
+stream = ExtResource("2_h0sg0")
 bus = &"SFX"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../AudioStreamPlayer3D")
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="Sounds"]
+stream = ExtResource("3_i6gay")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="Sounds"]
+stream = ExtResource("4_voll8")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3D4" type="AudioStreamPlayer3D" parent="Sounds"]
+stream = ExtResource("5_ujuhw")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3D5" type="AudioStreamPlayer3D" parent="Sounds"]
+stream = ExtResource("6_14fsq")
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

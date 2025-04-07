@@ -11,7 +11,3 @@ func _on_body_entered(body: Node3D) -> void:
 	gpu_particles_3d.emitting = true
 	audio_stream_player_3d.play()
 	EventBus.collected_heart.emit()
-
-	# await audio_stream_player_3d.finished
-	# await gpu_particles_3d.finished
-	# queue_free()
