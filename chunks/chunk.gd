@@ -8,5 +8,5 @@ func initialize(can_spawn_heart: bool, more_difficult: bool) -> void:
 		if not can_spawn_heart and child.is_in_group("item_heart"):
 			child.queue_free()
 
-		if more_difficult and child.is_in_group("item_fan"):
+		if more_difficult and child.is_in_group("obstacle_fan"):
 			(child as MyObstacleFan).enable_rotation()
